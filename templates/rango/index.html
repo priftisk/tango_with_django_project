@@ -13,12 +13,13 @@
 			hey there partner! <br />
 			<strong>{{ boldmessage }}</strong>
 		</div>
+
 		<h2>Most liked categories </h2>
 		<div>
 			{% if categories %}
 				<ul>
 					{% for category in categories %}
-						<a href="/rango/category/{{ category.slug }}/">{{category.name }}</a>
+						<li><a href="/rango/category/{{ category.slug }}/">{{category.name }}</a></li>
 					{% endfor %}
 				</ul>
 			{% else %}
@@ -41,8 +42,8 @@
 		</div>
 
 		
-
 		<div>
+			<a href="/rango/add_category/">Add a New Category</a><br />
 			<a href="/rango/about/">About</a><br />
 			<img src="{% static 'images/rango.jpg' %}"
 			alt="Picture of Rango" />
